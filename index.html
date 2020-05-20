@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="shortcut icon" type="image/png" href="images/sugarlandcar_favicon.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sugarland Car Rental</title>
+        <link rel="stylesheet" type="text/css" href="sugarland.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/4e82bbc21f.js" crossorigin="anonymous"></script>
+        <script src="sugarlandcar-validate.js" defer></script>
+    </head>
+    <body>
+        <header class="logo">
+            <img src="images/sugarland_car_logo.svg" alt="Sugarland Car Rental logo">
+        </header>
+
+        <!--line break-->
+        <hr>
+        
+        <!--enter personal details-->
+        <div class="wrapper">
+            <h1>Booking Enquiry Form</h1>
+
+            <form id="sugarlandcar-form" action="#" method="" novalidate>
+                <section class="formbox">
+                    <h2>Personal Details</h2>
+                    <div class="grid-col">
+                        <div class="fieldwithicon">
+                            <label>Name<span class="required-field"></span></label>
+                            <i class="fas fa-user"></i>
+                            <input type="text" name="name" id="name" placeholder="Name" title="Name" required>
+                            <div class="error hidden">Please enter your name</div>
+                        </div>
+                        <div class="fieldwithicon">
+                            <label>Date of Birth<span class="required-field"></span></label>
+                            <i class="far fa-calendar-alt"></i>
+                            <input type="date" name="dob" id="dob" class="form-control" title="Date of Birth" autocomplete="off" required>
+                            <div class="error hidden">Please enter your DOB</div>
+                        </div>
+                        <div class="fieldwithicon">
+                            <label>Email<span class="required-field"></span></label>
+                            <i class="far fa-envelope"></i>
+                            <input type="text" name="email" id="email" class="form-control" placeholder="Email" title="email" autocomplete="off" required>
+                            <div class="error hidden">Please enter your email address</div>
+                        </div>
+                        
+                        <div class="fieldwithicon">
+                            <label>Phone<span class="required-field"></span></label>
+                            <i class="fas fa-phone-alt"></i>
+                            <input type="tel" name="phone" id="ph" class="form-control" placeholder="Phone number" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" autocomplete="off" required>
+                            <div class="error hidden">Please enter your phone number 0000-000-000</div>
+                        </div>
+                        <div class="fieldwithicon">
+                            <label>State<span class="required-field"></span></label>
+                            <i class="far fa-flag"></i>
+                            <input type="text" name="stateofissue" id="state" class="form-control" placeholder="State" autocomplete="off" required>
+                            <div class="error hidden">Please enter state</div>
+                        </div>
+                        <div class="fieldwithicon">
+                            <label>Address<span class="required-field"></span></label>
+                            <i class="fas fa-shipping-fast"></i>
+                            <input type="text" name="mailaddress" id="address" class="form-control" placeholder="Address" autocomplete="off" required>
+                            <div class="error hidden">Please enter mailing address</div>
+                        </div>
+                        <div class="fieldwithicon">
+                            <label>Post Code<span class="required-field"></span></label>
+                            <i class="fas fa-mail-bulk"></i>
+                            <input type="text" name="postcode" id="pcode" class="form-control" placeholder="Post Code" pattern="[0-9]*" autocomplete="off" required>
+                            <div class="error hidden">Please enter post code</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!--line break-->
+                <hr>
+
+                <section class="formbox">
+                    <h2>Drivers Details</h2>
+                    <div class="grid-col-2">
+                        <div class="fieldwithicon">
+                            <label for="drnumber">Drivers License<span class="required-field"></span></label>
+                            <i class="far fa-address-card"></i>
+                            <input type="text" name="drnumber" id="dnumber" class="form-control" placeholder="Drivers License No." autocomplete="off" required>
+                            <div class="error hidden">Driver's License number invalid</div>
+                        </div>
+                        <div class="fieldwithicon">
+                            <label for="drstate">State of Issue<span class="required-field"></span></label>
+                            <i class="far fa-flag"></i>
+                            <input type="text" name="dlstate" id="dstate" class="form-control" placeholder="State of issue" autocomplete="off" required>
+                            <div class="error hidden">Please enter state of issue</div>
+                        </div>
+                        <div class="fieldwithicon">
+                            <label for="drexpiry">Expiry Date<span class="required-field"></span></label>
+                            <i class="far fa-calendar-alt"></i>
+                            <input type="date" name="expdate" id="date" class="form-control" autocomplete="off" required>
+                            <div class="error hidden">Please select expiry date</div>
+                        </div>
+                        <div class="fieldwithicon">
+                            <label for="country">Country<span class="required-field"></span></label>
+                            <i class="fas fa-globe-asia"></i>
+                            <input type="text" name="country" id="count" class="form-control" placeholder="Country" autocomplete="off" required>
+                            <div class="error hidden">Please enter your country</div>
+                        </div>
+                        <div class="field">
+                            <p>Additional Drivers?</p>
+                            <input type="checkbox" id="adddriver" class="form-control" value="yes">
+                            <label for="adddriver">Yes</label>
+                        </div>
+                    </div>
+                </section>
+
+                <!--line break-->
+                <hr>
+
+                <!--enter vehicle choice details-->
+                <section class="formbox">
+                    <h3>Vehicle Details</h3>
+                    <div class="carwithicon">
+                        <label class="car-label">Vehicle Choice<span class="required-field"></span></label>
+                        <i class="fas fa-car"></i>
+                        <select class="car-input" name="vehicle" class="form-control" required>
+                                <option value="" disabled selected>Select</option>
+                                <option value="2drmanuali20">2dr Manual I20 (50kms per day)</option>
+                                <option value="2drmanuali20">2dr Manual I20 (Unlimited kms)</option>
+                                <option value="4drmanualgetz">4dr Manual Getz (Unlimited kms)</option>
+                                <option value="4drautohyundai/kia">4dr Auto Hyundai/Kia (Unlimited kms)</option>
+                                <option value="toyotacorolla">Toyota Corolla (Unlimited kms)</option>
+                                <option value="toyotacamry">Toyota Camry (Unlimited kms)</option>
+                                <option value="toyotatarago">Toyota Tarago (Unlimited kms)</option>
+                                <option value="toyotahiluxutesinglecab">Toyota Hilux Ute Single Cab (200kms per day)</option>
+                                <option value="toyoyahiluxutedualcab">Toyota Hilux Ute Dual Cab (200kms per day)</option>
+                                <option value="isuzupantectruck">Isuzu Pantec Truck (200kms per day)</option>
+                        </select>
+                        <div class="error hidden">Please select vehicle</div>
+                    </div>
+                    <div class="grid-col-3">
+                        <div class="selectwithicon">
+                            <label>Pick-up Location<span class="required-field"></span></label>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <select name="pickuplo" class="form-control" required>
+                                <option value="" disabled="" selected="">Select</option>
+                                <option value="carinsdmairport">Carins Domestic Airport</option>
+                                <option value="carinsintairport">Carins International Airport</option>
+                                <option value="carinsaccommcbd">Carins Accommodation in CBD</option>
+                                <option value="missbeachaccomm">Mission Beach Accommodation</option>
+                                <option value="missbeachchar">Mission Beach Charters</option>
+                                <option value="bedarraislresort">Bedarra Island Resort</option>
+                                <option value="bedarraislwattaxi">Bedarra Island Water Taxi</option>
+                            </select>
+                            <div class="error hidden">Please enter pickup location</div>
+                        </div>
+                        <div class="selectwithicon">
+                            <label>Date<span class="required-field"></span></label>
+                            <i class="far fa-calendar-alt"></i>
+                            <input type="date" name="datepickup" class="form-control">
+                            <div class="error hidden">Please enter pickup date</div>
+                        </div>
+                        <div class="selectwithicon">
+                            <label>Time<span class="required-field"></span></label>
+                            <i class="far fa-clock"></i>
+                            <input type="time" name="timepickup" class="form-control">
+                            <div class="error hidden">Please enter pickup time</div>
+                        </div>
+                        <div class="selectwithicon">
+                                <label>Drop-off Location<span class="required-field"></span></label>
+                                <i class="fas fa-map-marker-alt"></i>
+                                    <select name="dropofflo" class="form-control">
+                                        <option value="" disabled selected>Select</option>
+                                        <option value="cairnsoffice">Cairns Office</option>
+                                        <option value="cairnsdomesticair">Cairns Domestic Airport</option>
+                                        <option value="cairnsinternationalair">Cairns International Airport</option>
+                                        <option value="cairnsaccommodationcbd">Cairns Accommodation in CBD</option>
+                                        <option value="missionbeachoffice">Mission Beach Office</option>
+                                        <option value="missionbeachaccommodation">Mission Beach Accommodation</option>
+                                        <option value="bedarraislandresort">Bedarra Island Resort</option>
+                                        <option value="bedarraislandwatertaxi">Bedarra Island Other</option>
+                                </select>
+                                <div class="error hidden">Please enter drop-off location</div>
+                        </div>
+                        <div class="selectwithicon">
+                                <label>Date<span class="required-field"></span></label>
+                                <i class="far fa-calendar-alt"></i>
+                                <input type="date" name="datedropoff" class="form-control">
+                                <div class="error hidden">Please enter drop-off date</div>
+                        </div>
+                        <div class="selectwithicon">
+                                <label>Time<span class="required-field"></span></label>
+                                <i class="far fa-clock"></i>
+                                <input type="time" name="timedropoff" class="form-control">
+                                <div class="error hidden">Please enter drop-off time</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!--line break-->
+                <hr>
+
+                <!--checkbox input travel-->
+                <div class="fieldckbox tr_office">
+                    <p class="sub-heading">If travelling between Cairns and Mission Beach offices, will a return trip be required at a later date?</p>
+                    <input type="checkbox" id="trav_ckbox" value="yes" onclick="travchbox()">
+                    <label for="trav_ckbox">Yes</label>
+                    <div id="tr_office" class="tr_office ckbox_grid_col">
+                        <section class="formbox">
+                            <div class="grid-col-3">
+                                <div class="selectwithicon">
+                                    <label>Pick-up Location<span class="required-field"></span></label>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <select name="pickuplo" class="form-control">
+                                        <option value="" disabled selected>Select</option>
+                                        <option value="carinsdmairport">Carins Domestic Airport</option>
+                                        <option value="carinsintairport">Carins International Airport</option>
+                                        <option value="carinsaccommcbd">Carins Accommodation in CBD</option>
+                                        <option value="missbeachaccomm">Mission Beach Accommodation</option>
+                                        <option value="missbeachchar">Mission Beach Charters</option>
+                                        <option value="bedarraislresort">Bedarra Island Resort</option>
+                                        <option value="bedarraislwattaxi">Bedarra Island Water Taxi</option>
+                                    </select>
+                                    <div class="error hidden">Please enter pickup location</div>
+                                </div>
+                                <div class="selectwithicon">
+                                    <label>Date<span class="required-field"></span></label>
+                                    <i class="far fa-calendar-alt"></i>
+                                    <input type="date" name="datepickup" class="form-control">
+                                    <div class="error hidden">Please enter pickup date</div>
+                                </div>
+                                <div class="selectwithicon">
+                                    <label>Time<span class="required-field"></span></label>
+                                    <i class="far fa-clock"></i>
+                                    <input type="time" name="timepickup" class="form-control">
+                                    <div class="error hidden">Please enter pickup time</div>
+                                </div>
+                                <div class="selectwithicon">
+                                    <label>Drop-off Location<span class="required-field"></span></label>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <select name="dropofflo" class="form-control">
+                                        <option value="" disabled selected>Select</option>
+                                        <option value="cairnsoffice">Cairns Office</option>
+                                        <option value="cairnsdomesticair">Cairns Domestic Airport</option>
+                                        <option value="cairnsinternationalair">Cairns International Airport</option>
+                                        <option value="cairnsaccommodationcbd">Cairns Accommodation in CBD</option>
+                                        <option value="missionbeachoffice">Mission Beach Office</option>
+                                        <option value="missionbeachaccommodation">Mission Beach Accommodation</option>
+                                        <option value="bedarraislandresort">Bedarra Island Resort</option>
+                                        <option value="bedarraislandwatertaxi">Bedarra Island Other</option>
+                                    </select>
+                                    <div class="error hidden">Please enter drop-off location</div>
+                                </div>
+                                <div class="selectwithicon">
+                                    <label>Date<span class="required-field"></span></label>
+                                    <i class="far fa-calendar-alt"></i>
+                                    <input type="date" name="datedropoff" class="form-control" >
+                                    <div class="error hidden">Please enter drop-off date</div>
+                                </div>
+                                <div class="selectwithicon">
+                                    <label>Time<span class="required-field"></span></label>
+                                    <i class="far fa-clock"></i>
+                                    <input type="time" name="timedropoff" class="form-control" >
+                                    <div class="error hidden">Please enter drop-off date</div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>  
+
+                <!--adds on for the vehicle-->
+                <div class="fieldckbox ext_office">
+                    <p class="sub-heading">Adds on for your car?</p>
+                    <input type="checkbox" id="ext_ckbox" value="yes" onclick="extchbox()">
+                    <label for="extra_ckbox">Yes</label>
+                    <div id="ext_office" class="ext_office ckbox_grid_col">
+                        <section class="formbox">
+                            <h3>Extras</h3>
+                            <div class="info-row">
+                                <div class="field">
+                                    <p>Collision Damage Waiver $21 Per Day.</p>
+                                    <input type="checkbox" id="coll-damage" value="yes">
+                                    <label for="chbox">Yes</label>
+                                </div>
+                                <div class="field">
+                                    <p>Tyre & Windscreen Coverage $5 Per Day.</p>
+                                    <input type="checkbox" id="tyre-wind" value="yes">
+                                    <label for="chbox">Yes</label>
+                                </div>
+                                <div class="field">
+                                    <p>GPS $10 Per Day.</p>
+                                    <input type="checkbox" id="gps" value="yes">
+                                    <label for="chbox">Yes</label>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <!--line break-->
+                <hr>
+
+                <!--baby info-->       
+                <section class="formbox">
+                    <h3>Baby Info</h3>
+                    <div class="info-row-2">
+                        <div class="selectwithicon">
+                            <label for="babyseat">Include Baby Seats at $5 per day?</label>
+                            <i class="fas fa-baby-carriage"></i>
+                            <select name="babyseat" class="form-control">
+                                <option value="" disabled selected>Select</option>
+                                <option value="capsule">Capsule</option>
+                                <option value="babyseat">Baby Seat</option>
+                                <option value="boosterseat">Booster Seat</option>
+                            </select>
+                        </div>
+                        <div class="fieldwithicon">
+                            <label for="babyseats">Baby Seats No.</label>
+                            <i class="fas fa-baby"></i>
+                            <input type="number" name="babyseats" class="form-control" min="0" max="3" value="0">
+                        </div>
+                        <div class="fieldwithicon">
+                            <label for="childage">What is the age of your child?</label>
+                            <i class="fas fa-list-ol"></i>
+                            <input type="number" name="childage" class="form-control" min="0" max="5" value="0">
+                        </div>
+                    </div>
+                </section>
+                
+                <!--message box-->
+                <div class="message-field">
+                    <textarea name="message" class="form-control" id="message" rows="15" cols="80" maxlength="200" placeholder="Message here..."></textarea>
+                </div>
+
+                <!--submit button-->
+                <input type="submit" class="submit-btn" value="Submit" id="send_message">
+
+                <!--help button-->
+                <div id="helpvideo"><i class="fas fa-question"></i>Help Me!</div>
+                <video class="hidden" id="overlay" width="400" height="360" controls autoplay muted>
+                    <source src="images/Vietnam_Airlines_Instruction_for_Booking_Online.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                </video>
+            </form>
+        </div>
+    </body>
+</html>
