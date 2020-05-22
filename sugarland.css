@@ -70,19 +70,6 @@ input[type=date], input[type=time] {
     width: 46%;
 }
 
-/* all input fields :focus */
-input:focus, select:focus {
-    background-color: lightskyblue;
-}
-
-input:invalid {
-    background-color: lightpink;
-}
-
-select:required {
-    background-color: lightpink;
-}
-
 select {
     border: 1px solid orange;
     border-radius: 3px;
@@ -111,7 +98,6 @@ label {
     color: red;
     font-size: .8em;
     margin: .2rem 0 0 .8rem;
-    font-family: 'Roboto', sans-serif;
 /*  text-align: center;*/
 }
 
@@ -139,6 +125,31 @@ label {
     top: 8px;
     padding: 25px 10px;
     color: orange;
+}
+
+/* all input fields :focus */
+input:focus, select:focus {
+    background-color: lightpink;
+}
+
+input::placeholder {
+    color: red;
+}
+
+input:not(:placeholder-shown) {
+    color: black;
+}
+
+input[type=date]:not(:placeholder-shown) {
+    color: black;
+}
+
+input[type=date]:placeholder-shown {
+    color: red;
+}
+
+select:placeholder-shown {
+    color: red;
 }
 
 /* field with icon - select */
@@ -410,7 +421,9 @@ i {
         padding: 3px 10px;
         color: orange;
     }
-
+    .baby-container {
+        display: none;
+    }
     input[type=time] {
         border: 1px solid orange;
         border-radius: 3px;

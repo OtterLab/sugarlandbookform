@@ -29,44 +29,44 @@
                         <div class="fieldwithicon">
                             <label>Name<span class="required-field"></span></label>
                             <i class="fas fa-user"></i>
-                            <input type="text" name="name" id="name" placeholder="Name" title="Name" required>
+                            <input type="text" name="name" id="name" placeholder="Name" value="" title="Name" required>
                             <div class="error hidden">Please enter your name</div>
                         </div>
                         <div class="fieldwithicon">
                             <label>Date of Birth<span class="required-field"></span></label>
                             <i class="far fa-calendar-alt"></i>
-                            <input type="date" name="dob" id="dob" class="form-control" title="Date of Birth" autocomplete="off" required>
+                            <input type="date" name="dob" id="dob" class="form-control" value="" title="Date of Birth" autocomplete="off" required>
                             <div class="error hidden">Please enter your DOB</div>
                         </div>
                         <div class="fieldwithicon">
                             <label>Email<span class="required-field"></span></label>
                             <i class="far fa-envelope"></i>
-                            <input type="text" name="email" id="email" class="form-control" placeholder="Email" title="email" autocomplete="off" required>
+                            <input type="text" name="email" id="email" class="form-control" placeholder="Email" value="" title="email" autocomplete="off" required>
                             <div class="error hidden">Please enter your email address</div>
                         </div>
                         
                         <div class="fieldwithicon">
                             <label>Phone<span class="required-field"></span></label>
                             <i class="fas fa-phone-alt"></i>
-                            <input type="tel" name="phone" id="ph" class="form-control" placeholder="Phone number" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" autocomplete="off" required>
+                            <input type="tel" name="phone" id="ph" class="form-control" value="" placeholder="Phone number" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" autocomplete="off" required>
                             <div class="error hidden">Please enter your phone number 0000-000-000</div>
                         </div>
                         <div class="fieldwithicon">
                             <label>State<span class="required-field"></span></label>
                             <i class="far fa-flag"></i>
-                            <input type="text" name="stateofissue" id="state" class="form-control" placeholder="State" autocomplete="off" required>
+                            <input type="text" name="stateofissue" id="state" class="form-control" value="" placeholder="State" autocomplete="off" required>
                             <div class="error hidden">Please enter state</div>
                         </div>
                         <div class="fieldwithicon">
                             <label>Address<span class="required-field"></span></label>
                             <i class="fas fa-shipping-fast"></i>
-                            <input type="text" name="mailaddress" id="address" class="form-control" placeholder="Address" autocomplete="off" required>
+                            <input type="text" name="mailaddress" id="address" class="form-control" value="" placeholder="Address" autocomplete="off" required>
                             <div class="error hidden">Please enter mailing address</div>
                         </div>
                         <div class="fieldwithicon">
                             <label>Post Code<span class="required-field"></span></label>
                             <i class="fas fa-mail-bulk"></i>
-                            <input type="text" name="postcode" id="pcode" class="form-control" placeholder="Post Code" pattern="[0-9]*" autocomplete="off" required>
+                            <input type="text" name="postcode" id="pcode" class="form-control" value="" placeholder="Post Code" pattern="[0-9]*" autocomplete="off" required>
                             <div class="error hidden">Please enter post code</div>
                         </div>
                     </div>
@@ -81,13 +81,13 @@
                         <div class="fieldwithicon">
                             <label for="drnumber">Drivers License<span class="required-field"></span></label>
                             <i class="far fa-address-card"></i>
-                            <input type="text" name="drnumber" id="dnumber" class="form-control" placeholder="Drivers License No." autocomplete="off" required>
+                            <input type="text" name="drnumber" id="dnumber" class="form-control" value="" placeholder="Drivers License No." autocomplete="off" required>
                             <div class="error hidden">Driver's License number invalid</div>
                         </div>
                         <div class="fieldwithicon">
                             <label for="drstate">State of Issue<span class="required-field"></span></label>
                             <i class="far fa-flag"></i>
-                            <input type="text" name="dlstate" id="dstate" class="form-control" placeholder="State of issue" autocomplete="off" required>
+                            <input type="text" name="dlstate" id="dstate" class="form-control" value="" placeholder="State of issue" autocomplete="off" required>
                             <div class="error hidden">Please enter state of issue</div>
                         </div>
                         <div class="fieldwithicon">
@@ -99,7 +99,7 @@
                         <div class="fieldwithicon">
                             <label for="country">Country<span class="required-field"></span></label>
                             <i class="fas fa-globe-asia"></i>
-                            <input type="text" name="country" id="count" class="form-control" placeholder="Country" autocomplete="off" required>
+                            <input type="text" name="country" id="count" class="form-control" value="" placeholder="Country" autocomplete="off" required>
                             <div class="error hidden">Please enter your country</div>
                         </div>
                         <div class="field">
@@ -153,7 +153,7 @@
                         <div class="selectwithicon">
                             <label>Date<span class="required-field"></span></label>
                             <i class="far fa-calendar-alt"></i>
-                            <input type="date" name="datepickup" class="form-control">
+                            <input type="date" name="datepickup" class="form-control" required>
                             <div class="error hidden">Please enter pickup date</div>
                         </div>
                         <div class="selectwithicon">
@@ -298,6 +298,7 @@
 
                 <!--baby info-->       
                 <section class="formbox">
+                    <div class="baby-container">
                     <h3>Baby Info</h3>
                     <div class="info-row-2">
                         <div class="selectwithicon">
@@ -313,14 +314,15 @@
                         <div class="fieldwithicon">
                             <label for="babyseats">Baby Seats No.</label>
                             <i class="fas fa-baby"></i>
-                            <input type="number" name="babyseats" class="form-control" min="0" max="3" value="0">
+                            <input type="number" name="babyseats" value="" class="form-control" min="0" max="3" value="0">
                         </div>
                         <div class="fieldwithicon">
                             <label for="childage">What is the age of your child?</label>
                             <i class="fas fa-list-ol"></i>
-                            <input type="number" name="childage" class="form-control" min="0" max="5" value="0">
+                            <input type="number" name="childage" value="" class="form-control" min="0" max="5" value="0">
                         </div>
                     </div>
+                </div>
                 </section>
                 
                 <!--message box-->
